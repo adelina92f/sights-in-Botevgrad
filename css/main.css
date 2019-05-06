@@ -10,13 +10,12 @@
   
   body{
       width: 100%;
-      height: 100%;
       color: #000000;
      font-size: 16px;
   }
   .content-wrapper{
      width: 100%;
-    margin: auto;    
+    margin: auto;  
   }
   .logo {
     display: inline-block;
@@ -173,7 +172,7 @@
     .slider__item.current, 
     .slider__item.next{
       top: 0;
-      height: 150px;
+      height: 200px;
       
     }
     
@@ -181,7 +180,6 @@
         .slider__item.prev, 
     .slider__item.current, 
     .slider__item.next{
-        height: 400px;
         height: 300px;
     }
           
@@ -192,7 +190,6 @@
             .slider__item.prev, 
         .slider__item.current, 
         .slider__item.next{
-            height: 400px;
             height: 400px;
         }
               
@@ -324,7 +321,20 @@
 .content-section.hero-title {
 margin-top: 0;
 width: 100%;
+height: 200px;
 }
+
+@media only screen and (min-width: 700px) {
+    .content-section.hero-title {
+        height: 300px;
+        }
+    }
+
+    @media only screen and (min-width: 1024px) {
+        .content-section.hero-title {
+            height: 400px;
+            }
+        }
 
 .content-title {
 text-align: center;
@@ -338,6 +348,7 @@ padding: 20px 0 20px 0;
 background-size: cover;
 text-align: center;
 padding: 0px;
+margin-bottom: 20px;
 }
 
   .logo-blue{
@@ -361,17 +372,19 @@ padding: 0px;
       padding-left: 30px;
   }
   .title-img{
+      font-size: 16px;
+      width: 50%;
       padding: 5px;
       position: absolute;
       top: 27%;
-      left: 30%;
+      left: 26%;
   }
 
   @media only screen and (min-width: 700px) {
     .title-img{
         padding: 15px;
         top: 28%;
-      left: 33%;
+      left: 27%;
       }
     }
 
@@ -383,12 +396,12 @@ padding: 0px;
 
   .title-img h1{
 color: #fff;
-font-size: 20px;
+font-size: 18px;
   }
 
   @media only screen and (min-width: 700px) {
     .title-img h1{
-        font-size: 30px;
+        font-size: 26px;
           }
     }
 
@@ -400,9 +413,11 @@ font-size: 20px;
       border-radius: 25px;
   }
   .hero{
+      max-width: 1024px;
+      font-size: 18px;
+      margin: auto;
       text-align: center;
-      margin-top:20px;
-      padding: 0 50px;
+      margin-bottom: 30px;
   }
 
  .hero-button{
@@ -421,10 +436,16 @@ font-size: 20px;
 }
 .container-section{
     width: 100%;
-    display: flex;
-    justify-content: space-evenly;
+   display: block;
     margin-top: 60px;
 }
+
+@media only screen and (min-width: 700px) {
+    .container-section{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    }
 
 .container-section img:first-of-type{
     height: 49%;
@@ -432,7 +453,6 @@ font-size: 20px;
 
 section{
     padding-top: 15px;
-    margin-top:30px;
     background: #EDEFF0;
 padding-bottom: 30px;
 
@@ -441,22 +461,88 @@ padding-bottom: 30px;
 section h1{
     text-align: center;
 }
-article{
-    width: 25%;
+.box-news{
+    width: 70%;
+    height: 100%;
     background: #fff;
+    margin-bottom: 30px;
+    margin: auto;
 }
-article img{
+
+
+
+@media only screen and (min-width: 700px) {
+    .box-news{
+        width: 30%;
+        height:520px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    }
+
+    @media only screen and (min-width: 1024px) {
+        .box-news{
+            width: 25%;
+            height:520px;
+        }
+        }
+
+.box-news:last-child{
+    margin-bottom: 0px;
+}
+
+
+
+.box-news img{
     width: 100%;
-    margin-bottom: 20px;
+    height: 100%;
+    margin-bottom: 26px;
 }
-article h3{
+
+
+@media only screen and (min-width: 700px) {
+    .box-news img{
+        width: 100%;
+        height: 100%;
+        margin-bottom: 20px;
+        margin-left: 0px;
+    }
+    }
+
+.box-news h3{
     text-align: center;
 }
-article p{
+.box-news p{
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
+    font-size: 18px;
 }
-article a{
+
+@media only screen and (min-width: 700px) {
+    .box-news .first{
+        margin-bottom: 50px;
+    }
+    }
+
+    @media only screen and (min-width: 1024px) {
+        .box-news .first{
+            margin-bottom: 70px;
+        }
+        }
+
+        @media only screen and (min-width: 700px) {
+            .box-news .last{
+                margin-bottom: 25px;
+            }
+            }
+    
+            @media only screen and (min-width: 1024px) {
+                .box-news .last{
+                    margin-bottom: 50px;
+                }
+                }
+
+.box-news a{
     text-decoration: none;
     padding: 5px 10px;
     border: none;
@@ -465,11 +551,49 @@ article a{
 }
 .btn-readMore{
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 footer{
-    text-align: center;
-    background: #393F43;
+   background: url("../images/kula.png");
+   background-size: cover;
+   
+}
+footer img{
+    margin: 20px 30px;
+}
+footer p{
+    font-size: 16px;
+}
+.footer-box{
+    margin-left: 15%;
+    
+}
+footer h3{
+    margin-bottom: 20px;
+}
+.italic{
+    color: #000;
+    font-style: italic;
+    margin: 10px 0px;
+}
+
+.footer-container{
+    display: block;
+    margin-bottom: 20px;
+}
+@media only screen and (min-width: 700px) {
+    .footer-container{
+        display: flex;
+        justify-content:space-around;
+    }
+    }
+    @media only screen and (min-width: 700px) {
+            .footer-box{
+                margin-left: 0px;
+                width: 30%;
+            }
+        }
+.last-p{
     color: #fff;
-    padding: 5px 0;
+    text-align: center;
 }
