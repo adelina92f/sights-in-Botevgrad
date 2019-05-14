@@ -87,10 +87,16 @@
  }
 
 .top-nav{
-    float: right;
+    display: block;
     margin-top: 20px;
     margin-bottom: 30px;
 }
+
+@media only screen and (min-width: 700px) {
+    .top-nav{  
+    float: right;
+    }
+  }
   .top-nav a{
       text-decoration: none;
       margin: 10px;
@@ -118,9 +124,9 @@
   .content-section{
     max-width: 100%; 
     text-align: justify;
-    height: 150px;
+   /* height: 150px;*/
 }
-@media only screen and (min-width: 700px) {
+/*@media only screen and (min-width: 700px) {
     .content-section{
         height: 300px;
     }
@@ -132,15 +138,26 @@
             height: 400px;
         }
           
-        }
+        }*/
 
 .slider__holder {
-   /* position: relative;*/
+    position: relative;
     width: 100%;
+    height: 200px;
     overflow: hidden;
-  
+    object-fit: cover;
+}
+@media only screen and (min-width: 700px) {
+    .slider__holder{
+        height: 300px;
+    }
 }
 
+@media only screen and (min-width: 1024px) {
+    .slider__holder{
+        height: 350px;
+    }
+}
 .slider {
     width: 100%;
     position: relative;
@@ -172,11 +189,9 @@
     .slider__item.current, 
     .slider__item.next{
       top: 0;
-      height: 200px;
-      
     }
     
-    @media only screen and (min-width: 700px) {
+    /*@media only screen and (min-width: 700px) {
         .slider__item.prev, 
     .slider__item.current, 
     .slider__item.next{
@@ -184,7 +199,7 @@
     }
           
         }
-        
+      
 
         @media only screen and (min-width: 1024px) {
             .slider__item.prev, 
@@ -193,7 +208,7 @@
             height: 400px;
         }
               
-            }
+            }*/  
 
     .slider__item.prev {
       left:-100%;
@@ -212,9 +227,10 @@
     }*/
 
     .slider__item img {
-      height: 100%;
+      /*height: 100%;*/
       width: 100%;   
-     /*object-fit: cover;*/
+      height: 100%;
+     object-fit: cover;
     }
   
   .slider__actions {
@@ -236,67 +252,37 @@
   
   .slider__control[data-image="prev"] {
     position: absolute;
-    top: 255%;
-    left: 2%;
+    top: 45%;
+    left: 3%;
   }
-  
-  @media only screen and (min-width: 700px) {
-    .slider__control[data-image="prev"] {
-        top: 634%;
-        left: 2%;
-      }
-      
-    }
-
-    @media only screen and (min-width: 1024px) {
-        .slider__control[data-image="prev"] {
-            top: 834%;
-           
-          }
-          
-        }
-    
-  
 
   .slider__control[data-image="next"] {
     position: absolute;
-    top: 255%;
-    left: 88%;
+    top: 45%;
+    left: 85%;
   }
 
   @media only screen and (min-width: 700px) {
-    .slider__control[data-image="next"] {
-        top: 634%;
-    left: 93%;
-      }
-      
+    .slider__control[data-image="next"]{
+     left: 92%;
     }
-
-    @media only screen and (min-width: 1024px) {
-        .slider__control[data-image="next"] {
-            top: 834%;
-        
-          }
-          
-        }
+}
   
   .slider__paging{
-    position: relative;
-    top: 125px;
+    position: absolute;
+    top: 93%;
+    left: 50%;
+    
     display: flex;
     justify-content:center; 
   }
-  
+
   @media only screen and (min-width: 700px) {
     .slider__paging{
-        top: 270px; 
-      }
+     top: 96%;
     }
-    @media only screen and (min-width: 1024px) {
-        .slider__paging{
-            top: 370px; 
-          }
-        }
+}
+  
 
   .slider__paging span:empty{
     position: relative;
@@ -321,10 +307,9 @@
 .content-section.hero-title {
 margin-top: 0;
 width: 100%;
-height: 200px;
 }
 
-@media only screen and (min-width: 700px) {
+/* @media only screen and (min-width: 700px) {
     .content-section.hero-title {
         height: 300px;
         }
@@ -334,7 +319,7 @@ height: 200px;
         .content-section.hero-title {
             height: 400px;
             }
-        }
+        }*/
 
 .content-title {
 text-align: center;
@@ -355,22 +340,11 @@ margin-bottom: 20px;
       color: #21A2B5;
   }
 
-  .background{
-     background-size: cover;
-     height: 550px;
-    
-  }
-  header{
-      overflow: hidden;
-  }
   .title-img{
       display: inline-block;
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0,0,0,0.3));
   }
-  .background{
-      padding-top: 350px;
-      padding-left: 30px;
-  }
+
   .title-img{
       font-size: 16px;
       width: 50%;
@@ -554,9 +528,8 @@ section h1{
     margin-bottom: 10px;
 }
 footer{
-   background: url("../images/kula.png");
-   background-size: cover;
-   
+   background: #125064;
+   color: #fff;
 }
 footer img{
     margin: 20px 30px;
@@ -572,7 +545,7 @@ footer h3{
     margin-bottom: 20px;
 }
 .italic{
-    color: #000;
+    color: #fff;
     font-style: italic;
     margin: 10px 0px;
 }
