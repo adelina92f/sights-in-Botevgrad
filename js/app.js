@@ -1,5 +1,5 @@
-$(function(){
-    if(typeof adiSlider === '{}'){
+$(function () {
+    if (typeof adiSlider === '{}') {
         adiSlider();
     }
 })

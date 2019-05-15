@@ -5,6 +5,7 @@
     overflow: hidden;
     object-fit: cover;
 }
+
 @media only screen and (min-width: 700px) {
     .slider__holder{
         height: 300px;
@@ -16,6 +17,7 @@
         height: 350px;
     }
 }
+
 .slider {
     width: 100%;
     position: relative;
@@ -27,13 +29,13 @@
   }
   
   
-  .slider[data-type="vertical"] .slider__item.pointImage {
-      transition: left .7s ease-in;
+.slider[data-type="vertical"] .slider__item.pointImage {
+    transition: left .7s ease-in;
       
-  }
+}
     /* NEW*/
   
-  .slider__item {
+.slider__item {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -41,89 +43,84 @@
     left: auto;
     /*#DY*/
     transition: left .7s ease-in;
-  }
+}
   
-    .slider__item.prev, 
-    .slider__item.current, 
-    .slider__item.next{
-      top: 0;
-    }
+.slider__item.prev, 
+.slider__item.current, 
+.slider__item.next{
+    top: 0;
+}
 
-    .slider__item.prev {
-      left:-100%;
-    }
+.slider__item.prev {
+    left:-100%;
+}
   
-    .slider__item.current {
-      left: 0;
-    }
+.slider__item.current {
+    left: 0;
+}
   
-    .slider__item.next {
-      left: 100%;
-    }
+.slider__item.next {
+    left: 100%;
+}
 
-    /*.slider__item.next.itemNext{
-        width: 0%;
-    }*/
-
-    .slider__item img {
-      /*height: 100%;*/
-      width: 100%;   
-      height: 100%;
-     object-fit: cover;
-    }
+.slider__item img {
+    width: 100%;   
+    height: 100%;
+    object-fit: cover;
+}
   
-  .slider__actions {
+.slider__actions {
     text-align: center;
-  }
+}
   
-  .slider__control {
+.slider__control {
     padding: 10px 20px;
     border-radius: 50px;
     border: 2px solid #ffffff;
     color:#ffffff;
     background: transparent;
     outline: none;
-  }
+}
   
-  .slider__actions {
+.slider__actions {
   margin-bottom: 10px;
-  }
+}
   
-  .slider__control[data-image="prev"] {
+.slider__control[data-image="prev"] {
     position: absolute;
     top: 45%;
     left: 3%;
-  }
+}
 
-  .slider__control[data-image="next"] {
+.slider__control[data-image="next"] {
     position: absolute;
     top: 45%;
     left: 85%;
-  }
+}
 
-  @media only screen and (min-width: 700px) {
+@media only screen and (min-width: 700px) {
     .slider__control[data-image="next"]{
      left: 92%;
     }
 }
   
-  .slider__paging{
+.slider__paging{
     position: absolute;
     top: 93%;
     left: 50%;
     
     display: flex;
     justify-content:center; 
-  }
+}
 
-  @media only screen and (min-width: 700px) {
+@media only screen and (min-width: 700px) {
     .slider__paging{
      top: 96%;
     }
 }
   
 
-  .slider__paging span:empty{
+.slider__paging span:empty{
     position: relative;
     display: block;
     width: 10px;
@@ -133,12 +130,12 @@
     margin-right: 5px;
     border-radius: 50%;
    
-  }
+}
 
-  .slider__paging span:hover{
-      background: yellow;
-  }
+.slider__paging span:hover{
+    background: yellow;
+}
   
-  .slider__paging span.active{
+.slider__paging span.active{
     background:	#ffffff;
-  }
+}
